@@ -8,15 +8,13 @@
 #include "AAppLauncher.generated.h"
 
 class ULevelLoader;
+class ARaidenGameModeBase;
 
 UCLASS()
 class RAIDEN_API AAppLauncher : public AActor
 {
 	GENERATED_BODY()
-private:
-
-	UPROPERTY(VisibleAnywhere)
-	ULevelLoader* level_loader;
+private:	
 
 	void InitApplication();
 protected:

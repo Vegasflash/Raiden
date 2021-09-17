@@ -6,6 +6,8 @@
 #include "GameFramework/GameModeBase.h"
 #include "RaidenGameModeBase.generated.h"
 
+class ULevelLoader;
+
 /**
  * 
  */
@@ -14,4 +16,10 @@ class RAIDEN_API ARaidenGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:	
+	ARaidenGameModeBase();
+	virtual ~ARaidenGameModeBase() = default;
+
+	UPROPERTY(VisibleAnywhere)
+	ULevelLoader* level_loader;
 };

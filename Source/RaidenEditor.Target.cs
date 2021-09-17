@@ -8,6 +8,7 @@ public class RaidenEditorTarget : TargetRules
 	public RaidenEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
+		ExtraModuleNames.AddRange( new string[] { "RickDevHelperTools" } );
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.AddRange( new string[] { "Raiden" } );
 	}
