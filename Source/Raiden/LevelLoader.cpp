@@ -14,7 +14,7 @@ ULevelLoader::ULevelLoader()
 	// ...
 }
 
-const TMap<ELevel, FString> ULevelLoader::LevelNameByLevel =
+const TMap<ELevel, FString> ULevelLoader::level_name_by_level =
 {
 	{ELevel::Gym_Rick, "Gym_Rick"},
 };
@@ -33,13 +33,13 @@ void ULevelLoader::BeginPlay()
 // Called every frame
 void ULevelLoader::LoadLevel(UWorld* world, ELevel level)
 {
-	if (!LevelNameByLevel.Contains(level))
+	if (!level_name_by_level.Contains(level))
 	{
 		UE_LOG(LogTemp, Error, TEXT("Missing TMap entry for Level being loaded: %d"), level);
 		return;
 	}
 	
-	auto level_name = FName(LevelNameByLevel[level]);
+	auto level_name = FName(level_name_by_level[level]);
 
 	UGameplayStatics::OpenLevel(world, level_name);
 }

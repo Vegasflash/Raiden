@@ -15,7 +15,10 @@
 		{
 			"name": "RickDevHelperTools",
 			"type": "Editor",
-			"loadingPhase": "PostEngineInit"
+			"loadingPhase": "PostEngineInit",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	],
 	"Plugins": [

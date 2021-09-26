@@ -14,7 +14,7 @@ class RAIDEN_API ULevelLoader : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	static const TMap<ELevel, FString> LevelNameByLevel;
+	static const TMap<ELevel, FString> level_name_by_level;
 
 	// Sets default values for this component's properties
 	ULevelLoader();
