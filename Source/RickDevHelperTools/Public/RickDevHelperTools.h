@@ -1,15 +1,16 @@
 #pragma once
+
 #include "UnrealEd.h"
 #include "SlateBasics.h"
 #include "SlateExtras.h"
-//#include "LevelEditor.h"
+#include "LevelEditor.h"
 #include "Editor/PropertyEditor/Public/PropertyEditing.h"
 #include "IAssetTypeActions.h"
-#include "Modules/ModuleManager.h"
+#include "IRickDevHelperToolsModuleInterface.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(RickDevHelperTools, All, All);
 
-class FRickDevHelperTools : public IModuleInterface
+class FRickDevHelperTools : public IRickDevHelperToolsModuleInterface
 {
 public:
 	void AddMenuExtension(const FMenuExtensionDelegate& extension_delegate,
@@ -23,6 +24,8 @@ public:
 
 	/* Called when the module is unloaded */
 	virtual void ShutdownModule() override;
+
+	virtual void AddModuleListeners() override;
 
 	static inline FRickDevHelperTools& Get()
 	{

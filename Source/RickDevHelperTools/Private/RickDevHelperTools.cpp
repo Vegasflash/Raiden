@@ -1,5 +1,6 @@
 #include "RickDevHelperTools.h"
 #include "LevelEditor.h"
+#include "IRickDevHelperToolsModuleInterface.h"
 
 DEFINE_LOG_CATEGORY(RickDevHelperTools);
 
@@ -34,6 +35,11 @@ void FRickDevHelperTools::StartupModule()
 void FRickDevHelperTools::ShutdownModule()
 {
 	UE_LOG(RickDevHelperTools, Warning, TEXT("RickDevHelperTools module has been unloaded"));
+}
+
+void FRickDevHelperTools::AddModuleListeners()
+{
+	
 }
 
 #pragma endregion

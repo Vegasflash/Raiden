@@ -11,5 +11,6 @@ public class RaidenEditorTarget : TargetRules
 		ExtraModuleNames.AddRange( new string[] { "RickDevHelperTools" } );
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.AddRange( new string[] { "Raiden" } );
+		ExtraModuleNames.AddRange(new string[] { "RickDevHelperTools" });
 	}
 }

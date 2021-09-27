@@ -20,7 +20,7 @@ public class RickDevHelperTools : ModuleRules
 			"BlueprintGraph",
 			"AnimGraph",
 			"ComponentVisualizers",
-			"RickDevHelperTools"
+			"Raiden",
 		});
 
 		PrivateDependencyModuleNames.AddRange(
@@ -36,10 +36,13 @@ public class RickDevHelperTools : ModuleRules
 				"MainFrame",
 				"PropertyEditor",
 				"ComponentVisualizers",
-				"RickDevHelperTools"
+				"Raiden",
 		});
 
-		PublicIncludePaths.AddRange(new string[] {"RickDevHelperTools/Public"});
+		PublicIncludePaths.AddRange(new string[] {
+			"RickDevHelperTools/Public",
+		});
+
 		PrivateIncludePaths.AddRange(new string[] {"RickDevHelperTools/Private"});
 	}
 }
